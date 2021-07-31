@@ -1,0 +1,171 @@
+mode: category
+base_path: ./task2/ACSA
+glove_path: /home/xuwd/projects/absa/newtask/data/glove.840B.300d.txt
+sentiment_path: ./task2/ATSA/sentiment_dict.json
+result_path: ./task2/ACSA/result.xml
+lowercase: True
+max_vocab_size: None
+min_vocab_freq: 0
+aspect_term_model:
+  type: xlnet_fc
+  save: all
+  xlnet_fc:
+    xlnet_size: 768
+    hidden_size: 300
+    dropout: 0.1
+    optimizer: adam
+    batch_size: 32
+    learning_rate: 0.00002
+    weight_decay: 0
+    num_epoches: 10
+    gpu: 3
+  xlnet_cnn:
+    xlnet_size: 768
+    cnn_size: 300
+    filter_size: [3,4,5]
+    filter_nums: 100
+    dropout: 0.1
+    optimizer: adam
+    batch_size: 32
+    learning_rate: 0.00002
+    weight_decay: 0
+    num_epoches: 10
+    gpu: 2
+  recurrent_capsnet:
+    embed_size: 300
+    dropout: 0.5
+    num_layers: 2
+    capsule_size: 300
+    bidirectional: True
+    optimizer: adam
+    batch_size: 64
+    learning_rate: 0.0003
+    weight_decay: 0
+    num_epoches: 40
+    gpu: 2
+  bert_capsnet:
+    bert_size: 768
+    capsule_size: 300
+    dropout: 0.1
+    optimizer: adam
+    batch_size: 32
+    learning_rate: 0.00002
+    weight_decay: 0
+    num_epoches: 10
+    gpu: 2
+  bert_cnn:
+    bert_size: 768
+    cnn_size: 300
+    filter_size: [3,4,5]
+    filter_nums: 100
+    dropout: 0.1
+    optimizer: adam
+    batch_size: 32
+    learning_rate: 0.00002
+    weight_decay: 0
+    num_epoches: 10
+    gpu: 0
+  bert_fc:
+    bert_size: 768
+    cnn_size: 300
+    dropout: 0.1
+    optimizer: adam
+    batch_size: 32
+    learning_rate: 0.00002
+    weight_decay: 0
+    num_epoches: 10
+    gpu: 2
+  bert_attn:
+    bert_size: 768
+    hidden_size: 300
+    attn_hops: 1
+    mlp_d: 350
+    dropout: 0.1
+    optimizer: adam
+    batch_size: 32
+    learning_rate: 0.00002
+    weight_decay: 0
+    num_epoches: 10
+    gpu: 2
+  bert_rnn:
+    bert_size: 768
+    hidden_size: 300
+    hidden_dim: 600
+    layers: 1
+    lstm_dropout: 0.5
+    dropout: 0.1
+    optimizer: adam
+    batch_size: 32
+    learning_rate: 0.00002
+    weight_decay: 0
+    num_epoches: 10
+    gpu: 2
+aspect_category_model:
+  type: xlnet_fc
+  save: all
+  xlnet_fc:
+    xlnet_size: 768
+    hidden_size: 300
+    dropout: 0.1
+    optimizer: adam
+    batch_size: 32
+    learning_rate: 0.00002
+    weight_decay: 0
+    num_epoches: 10
+    gpu: 0
+  xlnet_cnn:
+    xlnet_size: 768
+    cnn_size: 300
+    filter_size: [3,4,5]
+    filter_nums: 100
+    dropout: 0.1
+    optimizer: adam
+    batch_size: 32
+    learning_rate: 0.00002
+    weight_decay: 0
+    num_epoches: 10
+    gpu: 0
+  recurrent_capsnet:
+    embed_size: 300
+    dropout: 0.5
+    num_layers: 2
+    capsule_size: 300
+    bidirectional: True
+    optimizer: adam
+    batch_size: 64
+    learning_rate: 0.0003
+    weight_decay: 0
+    num_epoches: 50
+    gpu: 0
+  bert_capsnet:
+    bert_size: 768
+    capsule_size: 300
+    dropout: 0.1
+    optimizer: adam
+    batch_size: 16
+    learning_rate: 0.00003
+    weight_decay: 0
+    num_epoches: 10
+    gpu: 0
+  bert_cnn:
+    bert_size: 768
+    cnn_size: 300
+    filter_size: [3,4,5]
+    filter_nums: 100
+    dropout: 0.1
+    optimizer: adam
+    batch_size: 32
+    learning_rate: 0.00002
+    weight_decay: 0
+    num_epoches: 10
+    gpu: 0
+  bert_fc:
+    bert_size: 768
+    cnn_size: 300
+    dropout: 0.1
+    optimizer: adam
+    batch_size: 32
+    learning_rate: 0.00002
+    weight_decay: 0
+    num_epoches: 10
+    gpu: 0

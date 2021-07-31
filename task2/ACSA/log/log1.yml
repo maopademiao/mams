@@ -1,0 +1,17 @@
+num_categories: 3
+oov_size: 0
+train_data:
+  negative: 2084
+  neutral: 3077
+  positive: 1929
+  sentence_avg_len: 27.463751763046545
+  sentence_max_len: 70
+  total: 7090
+val_data:
+  negative: 522
+  neutral: 781
+  positive: 486
+  sentence_avg_len: 26.988261598658468
+  sentence_max_len: 69
+  total: 1789
+vocab_size: 6619

@@ -1,0 +1,145 @@
+num_categories: 3
+oov_size: 0
+train_data:
+  aspect_avg_len: 1.2895583765421061
+  aspect_max_len: 10
+  negative: 2764
+  neutral: 5042
+  positive: 3380
+  sentence_avg_len: 27.803504380475594
+  sentence_max_len: 70
+  total: 11186
+val_data:
+  aspect_avg_len: 1.3122188905547227
+  aspect_max_len: 10
+  negative: 654
+  neutral: 1211
+  positive: 803
+  sentence_avg_len: 28.95127436281859
+  sentence_max_len: 69
+  total: 2668
+vocab_size: 7899
+
+# capsule
+#positive -- correct: 614  predict: 760  real: 803  f1: 9
+#negative -- correct: 529  predict: 680  real: 654  f1: 0.7931
+#neutral  -- correct: 1019 predict: 1228 real: 1211 f1: 0.8356
+#best_epoch: 21  best_step: 30  best_f1: 0.8048
+#max_val_accuracy: 0.8103448275862069
+
+# split_train + train  capsule
+#positive -- correct: 592  predict: 735  real: 803  f1: 0.7698
+#negative -- correct: 516  predict: 663  real: 654  f1: 0.7836
+#neutral  -- correct: 1033 predict: 1270 real: 1211 f1: 0.8327
+#best_epoch: 6  best_step: 320  best_f1: 0.7954
+#time: 90.2035s
+#max_val_accuracy: 0.8024737631184408
+
+# bert_capsule
+#positive -- correct: 670  predict: 838  real: 803  f1: 0.8166
+#negative -- correct: 542  predict: 659  real: 654  f1: 0.8256
+#neutral  -- correct: 1027 predict: 1171 real: 1211 f1: 0.8623
+#best_epoch: 8  best_step: 330  best_f1: 0.8348
+#time: 489.4320s
+#max_val_accuracy: 0.8392053973013494
+
+# bert_capsule + sentiment
+#positive -- correct: 677  predict: 832  real: 803  f1: 0.8281
+#negative -- correct: 530  predict: 645  real: 654  f1: 0.8160
+#neutral  -- correct: 1034 predict: 1191 real: 1211 f1: 0.8609
+#best_epoch: 7  best_step: 70  best_f1: 0.8350
+#time: 693.4489s
+#max_val_accuracy: 0.8399550224887556
+
+# split_all
+#positive -- correct: 633  predict: 775  real: 803  f1: 0.8023
+#negative -- correct: 544  predict: 688  real: 654  f1: 0.8107
+#neutral  -- correct: 1028 predict: 1205 real: 1211 f1: 0.8510
+#best_epoch: 4  best_step: 50  best_f1: 0.8213
+#time: 329.4782s
+#max_val_accuracy: 0.8264617691154422
+
+# split_train
+#positive -- correct: 638  predict: 761  real: 803  f1: 0.8159
+#negative -- correct: 532  predict: 662  real: 654  f1: 0.8085
+#neutral  -- correct: 1056 predict: 1245 real: 1211 f1: 0.8599
+#best_epoch: 8  best_step: 280  best_f1: 0.8281
+#time: 375.5495s
+#max_val_accuracy: 0.8343328335832084
+
+
+# split_train + train  bert_capsule
+#positive -- correct: 673  predict: 835  real: 803  f1: 0.8217
+#negative -- correct: 531  predict: 658  real: 654  f1: 0.8095
+#neutral  -- correct: 1023 predict: 1175 real: 1211 f1: 0.8575
+#best_epoch: 5  best_step: 70  best_f1: 0.8296
+#time: 808.1625s
+#max_val_accuracy: 0.8347076461769115
+
+#bert_cnn
+#positive -- correct: 666  predict: 792  real: 803  f1: 0.8351
+#negative -- correct: 536  predict: 665  real: 654  f1: 0.8127
+#neutral  -- correct: 1049 predict: 1211 real: 1211 f1: 0.8662
+#best_epoch: 3  best_step: 40  best_f1: 0.8380
+#time: 383.4421s
+#max_val_accuracy: 0.8437031484257871
+
+# bert_fc
+#positive -- correct: 661  predict: 811  real: 803  f1: 0.8191
+#negative -- correct: 551  predict: 701  real: 654  f1: 0.8133
+#neutral  -- correct: 1013 predict: 1156 real: 1211 f1: 0.8559
+#best_epoch: 8  best_step: 30  best_f1: 0.8294
+#time: 374.7227s
+#max_val_accuracy: 0.8339580209895052
+
+# bert_attn
+#positive -- correct: 668  predict: 812  real: 803  f1: 0.8272
+#negative -- correct: 547  predict: 684  real: 654  f1: 0.8176
+#neutral  -- correct: 1018 predict: 1172 real: 1211 f1: 0.8544
+#best_epoch: 1  best_step: 660  best_f1: 0.8331
+#time: 933.6148s
+#max_val_accuracy: 0.8369565217391305
+
+# ensemble
+#positive -- correct: 672  predict: 806  real: 803  f1: 0.8353
+#negative -- correct: 554  predict: 684  real: 654  f1: 0.8281
+#neutral  -- correct: 1038 predict: 1178 real: 1211 f1: 0.8690
+#best_f1: 0.8441
+#max_val_accuracy: 0.848575712143928
+
+#
+#positive -- correct: 671  predict: 801  real: 803  f1: 0.8367
+#negative -- correct: 550  predict: 676  real: 654  f1: 0.8271
+#neutral  -- correct: 1044 predict: 1191 real: 1211 f1: 0.8693
+#best_f1: 0.8443
+#max_val_accuracy: 0.8489505247376312
+
+# 4个
+#positive -- correct: 669  predict: 798  real: 803  f1: 0.8357
+#negative -- correct: 557  predict: 686  real: 654  f1: 0.8313
+#neutral  -- correct: 1042 predict: 1184 real: 1211 f1: 0.8701
+#best_f1: 0.8457
+#max_val_accuracy: 0.8500749625187406
+
+# bert capsule+cnn
+#positive -- correct: 671  predict: 825  real: 803  f1: 0.8243
+#negative -- correct: 540  predict: 657  real: 654  f1: 0.8238
+#neutral  -- correct: 1039 predict: 1186 real: 1211 f1: 0.8669
+#best_f1: 0.8383
+#max_val_accuracy: 0.843328335832084
+
+# bert cnn+fc
+#positive -- correct: 668  predict: 803  real: 803  f1: 0.8319
+#negative -- correct: 547  predict: 688  real: 654  f1: 0.8152
+#neutral  -- correct: 1027 predict: 1177 real: 1211 f1: 0.8601
+#best_f1: 0.8357
+#max_val_accuracy: 0.8403298350824587
+
+# bert capsule+fc
+#positive -- correct: 676  predict: 822  real: 803  f1: 0.8320
+#negative -- correct: 548  predict: 678  real: 654  f1: 0.8228
+#neutral  -- correct: 1030 predict: 1168 real: 1211 f1: 0.8659
+#best_f1: 0.8402
+#max_val_accuracy: 0.8448275862068966
+
+# vote
